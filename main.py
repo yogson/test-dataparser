@@ -129,14 +129,12 @@ if __name__ == '__main__':
         print('Usage: python3 main.py <report_file_name>')
 
     else:
-
         file_name = argv[1]
         api_report, *api_date = file_name.split('.')[0].split('-')
 
         report_file = download_file(file_name)
 
         if report_file:
-
             parsed, errors = parse_file(report_file)
             insert_data(
                 parsed,
